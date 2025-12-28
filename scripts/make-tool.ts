@@ -85,8 +85,9 @@ ${darkVars}
         cssVariables = `.tool-${kebabName} {\n  --primary: oklch(0.6 0.2 250);\n  --accent: oklch(0.8 0.1 250);\n}\n`;
     }
 
+    const convexName = kebabName.replace(/-/g, "_");
     const paths = {
-        convex: join(process.cwd(), "convex", kebabName),
+        convex: join(process.cwd(), "convex", convexName),
         feature: join(process.cwd(), "src", "features", kebabName),
         appRoute: join(process.cwd(), "src", "app", "(tools)", kebabName),
     };

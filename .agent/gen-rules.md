@@ -30,7 +30,7 @@ Each tool defines its own universe. Maintain strict isolation:
   - `utils/`: Helper functions specific to this tool.
   - `types/`: TypeScript definitions.
   - `index.tsx`: The main entry point for the tool.
-- **Backend Logic**: `convex/[tool-name]/`
+- **Backend Logic**: `convex/[tool_name]/` (Must use underscores, not hyphens)
   - `queries.ts`: For reading data (reactive).
   - `mutations.ts`: For modifying data.
   - `schema.ts`: Define table structures in `convex/schema.ts` (centralized).
