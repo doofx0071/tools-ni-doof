@@ -34,19 +34,22 @@ async function main() {
     const className = kebabName.split("-").map(s => s.charAt(0).toUpperCase() + s.slice(1)).join("");
 
     // Select Theme
-    const themeResponse = await prompts({
-        type: "autocomplete",
-        name: "theme",
-        message: "Select a Theme from TweakCN",
-        choices: themes.map(t => ({ title: t, value: t })),
-    });
+    let selectedTheme = args[1];
 
-    if (!themeResponse.theme) {
+    if (!selectedTheme) {
+        const themeResponse = await prompts({
+            type: "autocomplete",
+            name: "theme",
+            message: "Select a Theme from TweakCN",
+            choices: themes.map(t => ({ title: t, value: t })),
+        });
+        selectedTheme = themeResponse.theme;
+    }
+
+    if (!selectedTheme) {
         console.log("❌ No theme selected. Exiting.");
         process.exit(1);
     }
-
-    const selectedTheme = themeResponse.theme;
     const themeSlug = selectedTheme.toLowerCase().replace(/\s+/g, "-");
     const themeUrl = `https://tweakcn.com/r/themes/${themeSlug}.json`;
 
@@ -107,6 +110,14 @@ ${darkVars}
         writeFileSync(
             convexQuery,
             `import { query } from "../_generated/server";\n\nexport const get = query({\n  handler: async (ctx) => {\n    // Implementation here\n    return [];\n  },\n});`
+        );
+    }
+
+    const convexMutation = join(paths.convex, "mutations.ts");
+    if (!existsSync(convexMutation)) {
+        writeFileSync(
+            convexMutation,
+            `import { mutation } from "../_generated/server";\n\nexport const create = mutation({\n  handler: async (ctx, args) => {\n    // Implementation here\n  },\n});`
         );
     }
 
