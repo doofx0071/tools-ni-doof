@@ -144,7 +144,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="mt-32 pt-16 border-t border-white/5 text-center text-zinc-500 text-sm">
-          <p>© 2024 Tools ni Doof. Built with ❤️ and Next.js 15.</p>
+          <p>© 2026 Tools ni Doof.</p>
         </footer>
       </main>
     </div>

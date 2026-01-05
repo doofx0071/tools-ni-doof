@@ -7,7 +7,7 @@ trigger: always_on
 You are an expert developer building "Tools-ni-Doof", an all-in-one tools collection with a premium developer aesthetic.
 
 ## 🚀 Tech Stack
-- **Framework**: Next.js 16 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Backend**: Convex (Real-time DB)
 - **Package Manager**: Bun
 - **Styling**: Tailwind CSS v4 + Framer Motion
@@ -74,7 +74,7 @@ src/features/project-manager/
 - **Scoped Styling**: Always wrap your tool's main container in the scoped class (e.g., `.tool-webhook-tester`) to apply the TweakCN theme.
 - **Glassmorphism**: Use the `.glass` utility for cards and panels.
 - **Micro-animations**: Every interactive element should have a smooth Framer Motion transition.
-- **Premium Light Mode**: The default state should be a deep, textured light theme. Add header with darkmode button toggle.
+- **Premium Dark Mode**: The default state should be a deep, textured dark theme.
 
 ## 📱 Mobile & Responsiveness Rules (CRITICAL)
 - **Mobile-First IS MANDATORY**: Always build for mobile screens (320px+) first, then scale up using `md:` and `lg:` prefixes.

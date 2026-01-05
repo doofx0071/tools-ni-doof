@@ -70,7 +70,6 @@ src/features/project-manager/
 - **Scoped Styling**: Always wrap your tool's main container in the scoped class (e.g., `.tool-webhook-tester`) to apply the TweakCN theme.
 - **Glassmorphism**: Use the `.glass` utility for cards and panels.
 - **Micro-animations**: Every interactive element should have a smooth Framer Motion transition.
-- **Premium Dark Mode**: The default state should be a deep, textured dark theme.
 
 ## 📱 Mobile & Responsiveness Rules (CRITICAL)
 - **Mobile-First IS MANDATORY**: Always build for mobile screens (320px+) first, then scale up using `md:` and `lg:` prefixes.

@@ -10,6 +10,8 @@
 
 import type * as chrono_zone_mutations from "../chrono_zone/mutations.js";
 import type * as chrono_zone_queries from "../chrono_zone/queries.js";
+import type * as genstack_mutations from "../genstack/mutations.js";
+import type * as genstack_queries from "../genstack/queries.js";
 import type * as http from "../http.js";
 import type * as quick_qr_queries from "../quick_qr/queries.js";
 import type * as webhook_tester_mutations from "../webhook_tester/mutations.js";
@@ -24,6 +26,8 @@ import type {
 declare const fullApi: ApiFromModules<{
   "chrono_zone/mutations": typeof chrono_zone_mutations;
   "chrono_zone/queries": typeof chrono_zone_queries;
+  "genstack/mutations": typeof genstack_mutations;
+  "genstack/queries": typeof genstack_queries;
   http: typeof http;
   "quick_qr/queries": typeof quick_qr_queries;
   "webhook_tester/mutations": typeof webhook_tester_mutations;

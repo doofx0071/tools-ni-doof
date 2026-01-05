@@ -10,6 +10,7 @@
     "make-tool": "bun scripts/make-tool.ts"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.1.0",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-popover": "^1.1.15",
@@ -21,6 +22,7 @@
     "@radix-ui/react-switch": "^1.2.6",
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "@react-pdf/renderer": "^4.3.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -31,6 +33,7 @@
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "next-themes": "^0.4.6",
+    "pinoy-faker": "^1.0.11",
     "qr-code-styling": "^1.9.2",
     "react": "19.2.3",
     "react-dom": "19.2.3",
